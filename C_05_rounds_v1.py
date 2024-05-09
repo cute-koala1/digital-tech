@@ -40,11 +40,9 @@ user_first = two_rolls("User")
 user_points = user_first[0]
 double_points = user_first[1]
 
-
 # Tell the user if they are eligible for double points
 if double_points == "yes":
     print("If you win this round, you gain double points!")
-
 
 # Get initial dice rolls for computer
 computer_first = two_rolls("Computer")
@@ -75,8 +73,6 @@ while computer_points < 13 and user_points < 13:
 
         else:
             print(f"You rolled a {user_move} and have a total score of {user_points}.")
-
-
 
     # Roll die for computer and update computer points
     computer_move = roll_die()
@@ -113,7 +109,7 @@ if user_points < computer_points:
 else:
     # double user points if they are eligible
     if double_points == "yes":
-        user_points *=2
+        user_points *= 2
 
     print(f"👍👍👍Yay! You won the round and {user_points} points have "
           f"been added to your score 👍👍👍")
